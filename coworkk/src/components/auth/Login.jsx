@@ -21,7 +21,7 @@ const schema = Yup.object().shape({
         .email("Invalid email format!"),
     password: Yup.string()
         .required("Password is a required field!")
-        .min(8, "Password must be at least 8 characters!"),
+        .min(5, "Password must be at least 5 characters!"),
 });
 
 const Login = ({ signup, loading }) => {

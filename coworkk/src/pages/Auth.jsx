@@ -2,12 +2,9 @@ import { Box, Button, Center, Flex, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Login from "../components/auth/Login";
 import Signup from "../components/auth/Signup";
-import { DiJira } from "react-icons/di";
 import { FcGoogle } from "react-icons/fc";
-import { AiFillGithub } from "react-icons/ai";
-import { BiHomeSmile } from "react-icons/bi";
 import istock from "../../src/assets/istock.png"
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
 import { reset } from "../app/features/authSlice";
@@ -29,7 +26,7 @@ const Auth = () => {
             if (signup) {
                 setSignup(false);
             } else {
-                navigate("/");
+                navigate("/dashboard");
             }
         }
         if (error) {
@@ -42,34 +39,54 @@ const Auth = () => {
             height="100vh"
             width="100%"
             justify="center"
-            // direction={signup ? "row-reverse" : "row"}
+            align="center"
             position="relative"
             overflow="hidden"
-            align="center"
-            bgImage={`url(${istock})`}
-            bgSize="cover"
-            bgPosition="center"
-            bgRepeat="no-repeat"
-            _after={{
-                content: '""',
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                bgColor: "rgba(131, 183, 172, 0.4)",
-                zIndex: 0
-            }}
+            bg="#ff7373"
         >
+            {/* Background image and overlay */}
+            <Box
+                position="absolute"
+                top={0}
+                left={0}
+                width="100%"
+                height="100%"
+                bgImage={`url(${istock})`}
+                bgSize="cover"
+                bgPosition="center"
+                bgRepeat="no-repeat"
+                zIndex={0}
+                _before={{
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    bg: "rgba(255, 115, 115, 0.4)",
+                    zIndex: 1,
+                }}
+            />
+            <Box
+                position="absolute"
+                top="10%"
+                left="10%"
+                width="200px"
+                height="auto"
+                zIndex={2}
+            >
+                <img src={istock} alt="Your Image" width="100%" />
+            </Box>
             <Center
                 bg="white"
                 borderRadius="md"
                 boxShadow="xl"
-                width={{ base: "90%", md: "400px" }}                 maxW="95%"
-                zIndex={1}
+                width={{ base: "90%", md: "400px" }}
+                maxW="95%"
+                zIndex={3}
                 position="relative"
-                >
-
+                p={6}
+            >
                 <Stack
                     align="center"
                     justify="center"
