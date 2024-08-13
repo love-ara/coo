@@ -46,7 +46,7 @@ const Calendar = () => {
         <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
         <Box display="flex" justifyContent="space-between">
-          {/* CALENDAR SIDEBAR */}
+
           <Box
               flex="1 1 20%"
               backgroundColor={colors.green}

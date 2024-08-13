@@ -2,7 +2,6 @@ import Header from "./headers/Header";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import Sidebar from "./Sidebar";
-import AppHeader from "./AppHeader";
 import Project from "./Project";
 import FilterMenu from "./headers/FilterMenu";
 import ProjectCard from "./cards/ProjectCard";
@@ -21,7 +20,6 @@ export {
     Login,
     Signup,
     Sidebar,
-    AppHeader,
     Project,
     FilterMenu,
     NewProject,

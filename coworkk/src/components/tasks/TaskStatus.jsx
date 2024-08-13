@@ -9,7 +9,8 @@ import {
 const TaskStatus = () => {
     return (
         <Box
-            borderWidth={1}
+        m="20px"
+        borderWidth={1}
             borderRadius="lg"
             p={5}
             // boxShadow="md"
