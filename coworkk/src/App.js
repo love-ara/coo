@@ -10,12 +10,6 @@ function App() {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path = "/dashboard" element={<Home/>}/>
-                {/*/!* project  *!/*/}
-                {/*<Route path="/projects" element={<Projects />} />*/}
-                {/*<Route path="/project/:id" element={<ProjectDetails />} />*/}
-                {/*<Route path="/project/update/:id" element={<UpdateProject />} />*/}
-                {/*/!* task  *!/*/}
-                {/*<Route path="/task" element={<Tasks />} />*/}
             </Routes>
         </BrowserRouter>
     );
