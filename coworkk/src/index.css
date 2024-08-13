@@ -49,6 +49,6 @@ body {
   transform-origin: left;
 }
 
-.header {
+.navBar {
   width: calc(100% - 320px);
 }
