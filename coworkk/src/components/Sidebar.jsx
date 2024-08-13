@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Box, IconButton, Text, VStack, Image, Divider } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { MdMenu, MdHome, MdPeople, MdContacts, MdReceipt, MdPerson, MdCalendarToday, MdHelpOutline,
-    MdPieChart, MdTimeline, MdMap } from "react-icons/md";
+import {
+    MdMenu, MdHome, MdPeople, MdContacts, MdReceipt, MdPerson, MdCalendarToday, MdHelpOutline,
+    MdPieChart, MdTimeline, MdList, MdSettings
+} from "react-icons/md";
 import { FaExclamation } from "react-icons/fa";
 
 import user from "../../src/assets/sundar.png"
 
-
-
-const SidebarItem = ({ title, to, icon, selected, setSelected }) => {
+const SidebarItem = ({ title, to, icon, selected, setSelected, isCollapsed }) => {
     return (
         <Link to={to}>
             <Box
@@ -24,7 +24,7 @@ const SidebarItem = ({ title, to, icon, selected, setSelected }) => {
                 onClick={() => setSelected(title)}
             >
                 {icon}
-                <Text ml={4}>{title}</Text>
+                {!isCollapsed && <Text ml={4}>{title}</Text>}
             </Box>
         </Link>
     );
@@ -36,20 +36,21 @@ const Sidebar = () => {
 
     return (
         <Box
-            width={isCollapsed ? "80px" : "250px"}
+            width={isCollapsed ? "80px" : "300px"}
             height="100vh"
             bg="#83b7ac"
             color="white"
             p={4}
             position="fixed"
+            transition="width 0.3s"  // Smooth transition for width change
         >
             <IconButton
                 icon={<MdMenu />}
                 aria-label="Toggle menu"
                 onClick={() => setIsCollapsed(!isCollapsed)}
                 mb={4}
-                variant="outline"
-                colorScheme="black"
+                size="md"
+                color="white"
             />
             {!isCollapsed && (
                 <>
@@ -68,92 +69,90 @@ const Sidebar = () => {
                     <Divider mb={4} />
                 </>
             )}
-            <VStack spacing={2} align="stretch">
-                <SidebarItem
-                    title="Dashboard"
-                    to="/"
-                    icon={<MdHome />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Manage Team"
-                    to="/team"
-                    icon={<MdPeople />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Contacts Information"
-                    to="/contacts"
-                    icon={<MdContacts />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Invoices Balances"
-                    to="/invoices"
-                    icon={<MdReceipt />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <Text fontSize="sm"
-                      color="gray.400" mt={4} mb={2} ml={4}>
-                    Pages
-                </Text>
-                <SidebarItem
-                    title="Profile Form"
-                    to="/form"
-                    icon={<MdPerson />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Calendar"
-                    to="/calendar"
-                    icon={<MdCalendarToday />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Help"
-                    to="/help"
-                    icon={<MdHelpOutline />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <Text fontSize="sm" color="gray.400" mt={4} mb={2} ml={4}>
-                    Charts
-                </Text>
-                <SidebarItem
-                    title="Vital Task"
-                    to="/bar"
-                   icon={ <FaExclamation size={24}  color="white" />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Pie Chart"
-                    to="/pie"
-                    icon={<MdPieChart />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Line Chart"
-                    to="/line"
-                    icon={<MdTimeline />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <SidebarItem
-                    title="Geography Chart"
-                    to="/geography"
-                    icon={<MdMap />}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-            </VStack>
+            <Box
+                height={isCollapsed ? "calc(100vh - 50px)" : "calc(100vh - 100px)"}
+                overflowY="auto"
+            >
+                <VStack spacing={2} align="stretch">
+                    {/* Sidebar items, add more as needed */}
+                    <SidebarItem
+                        title="Dashboard"
+                        to="/"
+                        icon={<MdHome />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+
+                    <SidebarItem
+                        title="Vital Task"
+                        to="/vital"
+                        icon={<FaExclamation size={20} color="white" />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                    <SidebarItem
+                        title="Manage Team"
+                        to="/team"
+                        icon={<MdPeople />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                    <SidebarItem
+                        title="Contacts Information"
+                        to="/contacts"
+                        icon={<MdContacts />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                    <SidebarItem
+                        title="Task Categories"
+                        to="/taskCategory"
+                        icon={<MdList />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                    <Text fontSize="sm" color="teal" mt={4} mb={2} ml={4}>
+                        Pages
+                    </Text>
+                    <SidebarItem
+                        title="Profile Form"
+                        to="/form"
+                        icon={<MdPerson />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                    <SidebarItem
+                        title="Calendar"
+                        to="/calendar"
+                        icon={<MdCalendarToday />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                    <SidebarItem
+                        title="Settings"
+                        to="/settings"
+                        icon={<MdSettings />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                    <SidebarItem
+                        title="Help"
+                        to="/help"
+                        icon={<MdHelpOutline />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        isCollapsed={isCollapsed}
+                    />
+                </VStack>
+            </Box>
         </Box>
     );
 };
