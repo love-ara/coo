@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import style from "../pages/index.module.css";
 import logo from '../img.png'
 
+import {Box, Text, Heading, Button, Image} from "@chakra-ui/react";
+
 const LandingPage = () => {
     const navigate = useNavigate();
 
@@ -13,19 +15,32 @@ const LandingPage = () => {
 
     return (
         <>
-            <div className={style.container}>
-                <img
-                    src={logo} alt='logo' className="App-logo"
+            <Box
+                display='flex'
+                 flexDirection="column"
+                 alignItems='center'
+                 justifyContent='center'
+                //  py={200}
+                // px={400}
+                 mb={2}
+                pos='absolute'
+                 bgPosition='center'
+                 // bg="white"
+            >
+                <Image
+                    src={logo} alt='logo'
+                    boxSize='50px'
                 />
-                <h1 className={style.title}>
+                <Heading as="h1" color="black">
                     Welcome to CoWorkk!
-                </h1>
-                <p className={style.subTitle}>Log in to do more!</p>
+                </Heading>
+                <Text fontSize="32px" color="black">Log in to do more!</Text>
 
-                <button className={style.button} onClick={handleLoginClick}>
+                <Button onClick={handleLoginClick} mt='32px' colorScheme='teal' size='md'
+                        variant='solid' _hover={{background: 'grey'}}>
                     Login
-                </button>
-            </div>
+                </Button>
+            </Box>
 
         </>
     );

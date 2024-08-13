@@ -6,6 +6,7 @@ import {
     InputRightElement,
     Stack,
     Text,
+    Image
 } from "@chakra-ui/react";
 import { Formik } from "formik";
 import * as Yup from "yup";
@@ -13,6 +14,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../app/service/authService";
+import signin from "../../assets/signup.png"
 
 // Creating schema
 const schema = Yup.object().shape({
@@ -44,6 +46,8 @@ const Login = ({ signup, loading }) => {
                 dispatch(login(values));
             }}
         >
+
+
             {({
                 values,
                 errors,
@@ -53,8 +57,10 @@ const Login = ({ signup, loading }) => {
                 handleSubmit,
             }) => (
                 <form noValidate onSubmit={handleSubmit}>
+
                     <Stack width="300px" spacing={4}>
                         <Box>
+
                             <Input
                                 type="email"
                                 border="1px"
