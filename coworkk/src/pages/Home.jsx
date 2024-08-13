@@ -9,10 +9,10 @@ const Home = () => {
             <Box display={{ md: "flex", base: "none" }} width="300px">
                 <Sidebar />
             </Box>
- landing-page
-            <Box className="navBar" marginRight="15px">
+ {/*landing-page*/}
+ {/*           <Box className="navBar" marginRight="15px">*/}
                 <Header />
-                <AppHeader />
+                {/*<AppHeader />*/}
             <Box className="header" marginRight="15px">
 
                <Dashboard />
