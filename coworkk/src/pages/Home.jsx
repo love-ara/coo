@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
-import { Dashboard, Header, Sidebar } from "../components";
+import { AppHeader, Header, Sidebar } from "../components";
 
 const Home = () => {
     return (
@@ -10,7 +10,7 @@ const Home = () => {
             </Box>
             <Box className="header" marginRight="15px">
                 <Header />
-                <Dashboard />
+                <AppHeader />
             </Box>
         </Flex>
     );
