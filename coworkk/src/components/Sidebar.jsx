@@ -42,7 +42,7 @@ const Sidebar = () => {
             color="white"
             p={4}
             position="fixed"
-            transition="width 0.3s"  // Smooth transition for width change
+            transition="width 0.3s"
         >
             <IconButton
                 icon={<MdMenu />}
@@ -74,10 +74,9 @@ const Sidebar = () => {
                 overflowY="auto"
             >
                 <VStack spacing={2} align="stretch">
-                    {/* Sidebar items, add more as needed */}
                     <SidebarItem
                         title="Dashboard"
-                        to="/"
+                        to="/dashboard"
                         icon={<MdHome />}
                         selected={selected}
                         setSelected={setSelected}
