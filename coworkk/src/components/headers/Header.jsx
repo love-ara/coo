@@ -1,48 +1,32 @@
-import {
-    Avatar,
-    Box,
-    Flex,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    Stack,
-} from "@chakra-ui/react";
-import React from "react";
-import { AiOutlineUser } from "react-icons/ai";
-import { BiSearchAlt } from "react-icons/bi";
-import { IoNotificationsOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { ChakraProvider, Box, Input, Button, Text, Flex } from '@chakra-ui/react';
 
-const Header = () => {
+function Header() {
     return (
-        <Flex
-            height="60px"
-            justify="space-between"
-            alignItems="center"
-            px={{ base: "1rem", md: "4rem" }}
-            bg="blackAlpha.600"
-            borderRadius={10}
-            marginTop="10px"
-            width="100%"
-        >
-            <InputGroup width="40%" borderRadius={"full"}>
-                <InputLeftElement
-                    pointerEvents="none"
-                    children={<BiSearchAlt size={20} color="gray.300" />}
-                />
-                <Input type="text" placeholder="Search ..." />
-            </InputGroup>
-            <Box>
-                <Stack direction="row" spacing={5} align="center">
-                    <IoNotificationsOutline size={25} />
-                    {/* <Link to="/auth">
-                        <AiOutlineUser size={25} />
-                    </Link> */}
-                    <Avatar size="sm" />
-                </Stack>
+        <ChakraProvider>
+            <Box bg="#473c6b" p={5}>
+                <Flex justify="space-between" align="center" mb={5}>
+                    <Text fontSize="2xl" fontWeight="bold" color="#ee968d">
+                        Dash<Text color="#473c6b" fontSize="2xl" fontWeight="bold">board</Text></Text>
+                    <Text fontSize="lg" color="#ee968d">
+                        {new Date().toLocaleDateString('en-US',
+                            { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+                    </Text>
+                </Flex>
+                <Flex>
+                    <Input
+                        placeholder="Search your task here..."
+                        size="lg"
+                        mr={2}
+                        borderColor="#ee968d"
+                    />
+                    <Button colorScheme="#83b7ac" size="lg">
+                        <Text color="#83b7ac">Search</Text>
+                    </Button>
+                </Flex>
             </Box>
-        </Flex>
+        </ChakraProvider>
     );
-};
+}
 
 export default Header;
