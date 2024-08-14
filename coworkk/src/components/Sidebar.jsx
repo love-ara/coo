@@ -40,6 +40,9 @@ const Sidebar = () => {
             height="100vh"
             bg="#83b7ac"
             color="white"
+            w="280px"
+            mb='2000px'
+            borderRadius="lg"
             p={4}
             position="fixed"
             transition="width 0.3s"
