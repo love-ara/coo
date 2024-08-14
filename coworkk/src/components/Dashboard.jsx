@@ -7,8 +7,7 @@ import TaskStatus from "../components/tasks/TaskStatus";
 const Dashboard = () => {
     return (
             <Box className="header" marginRight="15px">
-                <Header />
-                {/*<AppHeader />*/}
+
                 {/*<ToDo />*/}
                 <TaskStatus />
                 {/*<CompletedTasks />*/}
