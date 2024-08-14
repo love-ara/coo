@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {Box, Flex} from "@chakra-ui/react";
-import {AllTask, Header, Sidebar} from "../components";
+import {AllTask, Header, SideBar} from "../components";
 import {useDispatch, useSelector} from "react-redux";
 import {getUserTask} from "../app/service/taskService";
 
@@ -17,7 +17,7 @@ const Tasks = () => {
     return (
         <Flex gap={3}>
             <Box display={{md: "flex", base: "none"}} width="300px">
-                <Sidebar/>
+                <SideBar/>
             </Box>
             <Box className="navBar" marginRight="15px">
                 <Header/>

@@ -12,8 +12,9 @@ const TaskStatus = () => {
             borderWidth={1}
             borderRadius="lg"
             p={5}
-            // boxShadow="md"
-            bg="white"
+            pos='abslute'
+            boxShadow="md"
+            bg="#f5f8ff"
             maxW="400px"
             mx="auto"
         >

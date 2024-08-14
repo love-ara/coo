@@ -1,7 +1,7 @@
 import Header from "./headers/Header";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
-import Sidebar from "./Sidebar";
+import SideBar from "./SideBar";
 import AppHeader from "./AppHeader";
 import Project from "./Project";
 import FilterMenu from "./headers/FilterMenu";
@@ -15,12 +15,13 @@ import NewTask from "./forms/NewTask";
 import TaskDetails from "./tasks/TaskDetails";
 import UpdateProjectForm from "./forms/UpdateProjectForm";
 import AllTask from "./tasks/AllTask";
+import Reminder from "./reminder/Reminder";
 
 export {
     Header,
     Login,
     Signup,
-    Sidebar,
+    SideBar,
     AppHeader,
     Project,
     FilterMenu,
@@ -33,5 +34,6 @@ export {
     NewTask,
     TaskDetails,
     UpdateProjectForm,
-    AllTask
+    AllTask,
+    Reminder
 };

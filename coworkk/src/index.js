@@ -12,10 +12,12 @@ import {Toaster} from "react-hot-toast";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
+
       <ChakraProvider theme={ theme} >
           <Toaster/>
           <App />
       </ChakraProvider>
+
   </Provider>
 );
 

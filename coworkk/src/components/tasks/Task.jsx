@@ -7,7 +7,7 @@ import {
     Progress,
     VStack,
     HStack,
-    Button,
+    Button, Flex,
 } from '@chakra-ui/react';
 
 const TaskManager = () => {
@@ -35,25 +35,19 @@ const TaskManager = () => {
         },
     ];
 
-    const completedTasks = [
-        {
-            title: "Walk the dog",
-            details: "Take the dog to the park and bring treats.",
-            completedDate: "2 days ago",
-        },
-        {
-            title: "Conduct meeting",
-            details: "Meet with the team to discuss project updates.",
-            completedDate: "2 days ago",
-        },
-    ];
 
     return (
-        <Box p={5}>
-            <Heading mb={5}>To-Do List</Heading>
-            <Button colorScheme="teal" mb={5}>Add Task</Button>
+        <Box p={5} borderWidth="1px"
+             boxShadow="lg"
+             borderRadius="lg"
+             mb={4} maxW="400px" bg="#f5f8ff" height="100%">
+            <Flex gap={5} >
+                <Heading mb={5}>To-Do List</Heading>
+                <Button colorScheme="teal" mb={5}>Add Task</Button>
+            </Flex>
+
             {tasks.map((task, index) => (
-                <Box key={index} borderWidth="1px" borderRadius="lg" p={4} mb={4}>
+                <Box key={index} borderWidth="2px" borderColor="grey" borderRadius="lg" p={4} mb={4}>
                     <Heading size="md">{task.title}</Heading>
                     <Text>{task.details}</Text>
                     <Badge colorScheme="yellow" mr={2}>{task.priority}</Badge>
@@ -62,30 +56,9 @@ const TaskManager = () => {
                 </Box>
             ))}
 
-            <Heading mt={10} mb={5}>Task Status</Heading>
-            <HStack spacing={10}>
-                <VStack>
-                    <Text>Completed</Text>
-                    <Progress value={84} colorScheme="green" width="200px" />
-                </VStack>
-                <VStack>
-                    <Text>In Progress</Text>
-                    <Progress value={46} colorScheme="yellow" width="200px" />
-                </VStack>
-                <VStack>
-                    <Text>Not Started</Text>
-                    <Progress value={20} colorScheme="red" width="200px" />
-                </VStack>
-            </HStack>
+            {/*<Heading mt={10} mb={5}>Task Status</Heading>*/}
 
-            <Heading mt={10} mb={5}>Completed Tasks</Heading>
-            {completedTasks.map((task, index) => (
-                <Box key={index} borderWidth="1px" borderRadius="lg" p={4} mb={4}>
-                    <Heading size="md">{task.title}</Heading>
-                    <Text>{task.details}</Text>
-                    <Text color="gray.500">Completed: {task.completedDate}</Text>
-                </Box>
-            ))}
+
         </Box>
     );
 };

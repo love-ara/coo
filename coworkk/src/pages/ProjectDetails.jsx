@@ -3,7 +3,7 @@ import React, {Fragment, useEffect} from "react";
 import {
     Header,
     ProjectDetailsCard,
-    Sidebar,
+    SideBar,
     TaskHeader,
     TaskTable,
 } from "../components";
@@ -28,7 +28,7 @@ const ProjectDetails = () => {
     return (
         <Flex gap={3}>
             <Box display={{md: "flex", base: "none"}} width="300px">
-                <Sidebar/>
+                <SideBar/>
             </Box>
             <Box className="navBar" marginRight="15px">
                 <Header/>

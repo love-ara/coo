@@ -1,31 +1,32 @@
-import {Box, Grid, GridItem} from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
-import {  Header, Sidebar } from "../components";
+import { Header, SideBar } from "../components";
 import Dashboard from "../components/Dashboard";
 
 const Home = () => {
     return (
         <Grid
             templateAreas={`"header header"
-                  "nav main"
-                  "nav footer"`}
-            gridTemplateRows={'180px 1fr 500px'}
-            gridTemplateColumns={'280px 1fr'}
-            // h='200px'
+                            "nav main"
+                            "nav main"
+                            "nav footer"`}
+            gridTemplateRows={'auto 1fr auto'}
+            gridTemplateColumns={'280px 1fr'}   // Sidebar takes 280px, main takes the remaining space
             gap='0.1'
             color='blackAlpha.700'
             fontWeight='bold'
+            height="100vh"
         >
             <GridItem bg='orange.300' area={'header'}>
                 <Header />
             </GridItem>
-            <GridItem  bg='pink.300' area={'nav'}>
-                <Sidebar/>
+            <GridItem bg='#f5f8ff' area={'nav'}>
+                <SideBar />
             </GridItem>
-            <GridItem bg='green.300' area={'main'}>
+            <GridItem bg='#f5f8ff' area={'main'}>
                 <Dashboard />
             </GridItem>
-            <GridItem  bg='blue.300' area={'footer'}>
+            <GridItem bg='blue.300' area={'footer'}>
                 Footer
             </GridItem>
         </Grid>
