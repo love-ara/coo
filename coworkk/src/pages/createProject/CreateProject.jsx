@@ -22,10 +22,10 @@ const CreateProject = () => {
                         <input className={style.dates} type="datetime-local" id="start-date" name="start-date" required/>
 
                         <label className={style.textLabel} htmlFor="due-date">Due Date:</label>
-                        <input style={{marginBottom : "30px"}}  className={style.dates} type="datetime-local" id="due-date" name="due-date" required/>
+                        <input style={{marginBottom : "15px"}}  className={style.dates} type="datetime-local" id="due-date" name="due-date" required/>
 
                         <button className={style.cancelButton} type={"submit"}>Cancel</button>
-                        <button className={style.createProjectButton} type="submit">Create Task</button>
+                        <button className={style.createProjectButton} type="submit">Create Project</button>
 
                     </form>
                 </div>
