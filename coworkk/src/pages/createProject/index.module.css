@@ -1,0 +1,157 @@
+.backgroundCover {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+}
+
+.horizontalLine {
+    width: 140px;
+    height: 3px;
+    margin-bottom: 10px;
+    margin-top: 1px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.createProject {
+    background-color: rgb(131, 181, 170);
+    border-radius: 7px;
+    width: 400px;
+    height: 71%;
+    padding: 20px;
+    border-style: solid;
+    /*border-width: 6px;*/
+}
+
+.header {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 2px;
+    color: #5a5a5a;
+}
+
+.textLabel {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.title {
+    display: block;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(204, 204, 204);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 360px;
+    border-style: solid;
+    border-width: 2px;
+    height: 36px;
+    margin-bottom: 8px;
+}
+
+.title::placeholder {
+    color: #b8b5b5;
+}
+
+.description {
+    display: block;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(204, 204, 204);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 360px;
+    height: 75px;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 8px;
+}
+
+.description::placeholder {
+    color: #b8b5b5;
+}
+
+.dates {
+    display: block;
+    margin-bottom: 8px;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(204, 204, 204);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 360px;
+    height: 30px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+input[type="datetime-local"] {
+    color: #b8b5b5;
+}
+
+.cancelButton {
+    border-radius: 4px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 2px;
+    border-color: white;
+    color: white;
+    font-size: 15px;
+}
+
+.createProjectButton {
+    border-radius: 4px;
+    background-color: white;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(131, 181, 170);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    float: right;
+    font-size: 15px;
+}
+
+@keyframes growLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 140px;
+    }
+}
+
+.horizontalLine {
+    animation: growLine 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.backgroundCover {
+    animation: fadeIn 0.5s ease-in;
+}

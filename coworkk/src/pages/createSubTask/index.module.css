@@ -1,0 +1,133 @@
+.backgroundCover {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+}
+
+.horizontalLine {
+    width: 150px;
+    height: 5px;
+    margin-bottom: 10px;
+    margin-top: 1px;
+    border: none;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.createTask {
+    background-color: #a6a5a5;
+    border-radius: 7px;
+    width: 500px;
+    height: 90%;
+    padding: 20px;
+    /*border-color: red;*/
+    border-style: solid;
+    /*border-width: 6px;*/
+}
+
+.title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 2px;
+
+}
+
+.projectTitle {
+    display: block;
+    margin-bottom: 8px;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(204, 204, 204);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 450px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.description {
+    display: block;
+    margin-bottom: 8px;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(204, 204, 204);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 450px;
+    height: 80px;
+    border-style: solid;
+    border-width: 2px;
+
+}
+
+/*label {*/
+/*    color: #f8f8f8;*/
+/*    font-weight: 500;*/
+/*    font-size: 15px;*/
+/*}*/
+
+.userInput::placeholder {
+    color: #878585;
+}
+
+.dates {
+    display: block;
+    margin-bottom: 8px;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(204, 204, 204);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 450px;
+    height: 50px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+select {
+    width: 450px;
+    background-color: white;
+    display: block;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+    margin-bottom: 26px;
+}
+
+.cancelButton {
+    border-radius: 3px;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(131, 181, 170);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(131, 181, 170);
+}
+
+.createTaskButton {
+    border-radius: 3px;
+    background-color: rgb(131, 181, 170);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 2px;
+    color: white;
+    float: right;
+}

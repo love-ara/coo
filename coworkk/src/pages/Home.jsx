@@ -10,7 +10,7 @@ const Home = () => {
                 <Sidebar />
             </Box>
  {/*landing-page*/}
- {/*           <Box className="navBar" marginRight="15px">*/}
+ {/*           <Box className="footer" marginRight="15px">*/}
                 <Header />
                 {/*<AppHeader />*/}
             <Box className="header" marginRight="15px">

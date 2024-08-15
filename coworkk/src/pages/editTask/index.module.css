@@ -1,0 +1,132 @@
+/*!* Reset *!*/
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*!* Background Cover *!*/
+/*.updateTaskBackground {*/
+/*    background-image: linear-gradient(to right, #00c6ff, #0072ff); !* Gradient background *!*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    z-index: 1000;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*!* Task Container *!*/
+/*.updateTaskContainer {*/
+/*    background-color: #fff;*/
+/*    border-radius: 15px;*/
+/*    padding: 40px;*/
+/*    max-width: 600px;*/
+/*    width: 100%;*/
+/*    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);*/
+/*    text-align: center;*/
+/*    animation: fadeIn 0.5s ease-in-out;*/
+/*}*/
+
+/*!* Animations *!*/
+/*@keyframes fadeIn {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*        transform: translateY(20px);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 1;*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
+
+/*!* Title *!*/
+/*.updateTaskTitle {*/
+/*    font-size: 28px;*/
+/*    font-weight: bold;*/
+/*    color: #0072ff;*/
+/*    margin-bottom: 20px;*/
+/*    text-transform: capitalize;*/
+/*}*/
+
+/*!* Input Fields *!*/
+/*.updateTaskInput,*/
+/*.updateTaskTextarea,*/
+/*.updateTaskSelect {*/
+/*    width: 100%;*/
+/*    padding: 15px;*/
+/*    margin-bottom: 20px;*/
+/*    border-radius: 10px;*/
+/*    border: 2px solid #00c6ff;*/
+/*    font-size: 16px;*/
+/*    color: #333;*/
+/*    background-color: #f9f9f9;*/
+/*    transition: border-color 0.3s ease, box-shadow 0.3s ease;*/
+/*}*/
+
+/*.updateTaskInput:focus,*/
+/*.updateTaskTextarea:focus,*/
+/*.updateTaskSelect:focus {*/
+/*    border-color: #0072ff;*/
+/*    box-shadow: 0 0 10px rgba(0, 114, 255, 0.2);*/
+/*    outline: none;*/
+/*}*/
+
+/*!* Textarea *!*/
+/*.updateTaskTextarea {*/
+/*    height: 100px;*/
+/*    resize: none;*/
+/*}*/
+
+/*!* Buttons *!*/
+/*.updateTaskButton,*/
+/*.updateCancelButton {*/
+/*    padding: 15px 40px;*/
+/*    border-radius: 50px;*/
+/*    font-size: 16px;*/
+/*    font-weight: bold;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s ease, color 0.3s ease;*/
+/*    border: none;*/
+/*}*/
+
+/*.updateTaskButton {*/
+/*    background-color: #0072ff;*/
+/*    color: #fff;*/
+/*    margin-right: 20px;*/
+/*}*/
+
+/*.updateTaskButton:hover {*/
+/*    background-color: #005bb5;*/
+/*}*/
+
+/*.updateCancelButton {*/
+/*    background-color: #f9f9f9;*/
+/*    color: #0072ff;*/
+/*}*/
+
+/*.updateCancelButton:hover {*/
+/*    background-color: #e1e1e1;*/
+/*}*/
+
+/*!* Labels *!*/
+/*label {*/
+/*    font-size: 16px;*/
+/*    font-weight: bold;*/
+/*    color: #333;*/
+/*    display: block;*/
+/*    !*margin-bottom: 8px;*!*/
+/*    text-align: left;*/
+/*}*/
+
+/*!* Encouraging Message *!*/
+/*.encouragingMessage {*/
+/*    font-size: 14px;*/
+/*    color: #555;*/
+/*    margin-top: 10px;*/
+/*    font-style: italic;*/
+/*}*/
