@@ -16,7 +16,7 @@ const CreateProject = () => {
                         <input className={style.title} placeholder={"Title"} type={"text"} id={"title"} name={"title"} required/>
 
                         <label className={style.textLabel} htmlFor={"description"}>Description</label>
-                        <textarea className={style.description} placeholder={"Project Description"} id={"description"} name={"description"} required/>
+                        <textarea className={style.description} placeholder={"Project Description..."} id={"description"} name={"description"} required/>
 
                         <label className={style.textLabel} htmlFor="start-date">Start Date:</label>
                         <input className={style.dates} type="datetime-local" id="start-date" name="start-date" required/>

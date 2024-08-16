@@ -17,7 +17,7 @@ const CreateTask = () => {
                                required/>
 
                         <label className={style.textLabel} htmlFor={"description"}>Description</label>
-                        <textarea className={style.description} placeholder={"Task Description"} id={"description"}
+                        <textarea className={style.description} placeholder={"Task Description..."} id={"description"}
                                   name={"description"} required/>
 
                         <label className={style.textLabel} htmlFor="start-date">Start Date:</label>

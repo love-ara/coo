@@ -6,7 +6,6 @@ import logo from '../assets/coworkk-new-logo.png'
 import rightIllustration from "../assets/right illustration.png"
 import leftIllustration from "../assets/left illustration.png"
 import plane from "../assets/Plane Element.png"
-import curveLine from "../assets/Vector 5.png"
 
 import {Box, Text, Heading, Button, Image} from "@chakra-ui/react";
 import Footer from "../components/footer/Footer";
@@ -35,7 +34,7 @@ const LandingPage = () => {
                         <button>&#x1f310;EN</button>
                         <button>Contact Sales</button>
                         <button>Resources</button>
-                        <button>Login</button>
+                        <button className={style.loginButton} onClick={handleLoginClick} >Login</button>
                         <button className={style.signUpButton}><span style={{color: "white"}}>Sign up free</span></button>
                     </div>
                 </div>
@@ -78,11 +77,6 @@ const LandingPage = () => {
 
             </div>
             <Footer />
-
-            <Button onClick={handleLoginClick} mt='32px' colorScheme='teal' size='md'
-                    variant='solid' _hover={{background: 'grey'}}>
-                Login
-            </Button>
         </>
 
     );

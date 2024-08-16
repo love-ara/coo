@@ -6,6 +6,7 @@ import CreateTask from "./pages/createTask/CreateTask";
 import UpdateTask from "./pages/editTask/EditTask";
 import CreateProject from "./pages/createProject/CreateProject";
 import CreateSubTask from "./pages/createSubTask/CreateSubTask";
+import AssignTask from "./pages/assignTask/AssignTask";
 
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
                 <Route path ="/createproject" element={<CreateProject/>}/>
                 <Route path = "/createtask" element={<CreateTask/>}/>
                 <Route path ="/createsubtask" element={<CreateSubTask/>}/>
-                <Route path ="/edittask" element={<UpdateTask/>}/>
             </Routes>
         </BrowserRouter>
     );
